@@ -1,0 +1,53 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    &.open > .closeIcon {
+        display: block;
+    }
+    &.open > .hamburger {
+        display: none;
+    }
+
+}
+a {
+    text-decoration: none;
+    font-size: 25px;
+}
+.hamburger {
+    display: block;
+}
+.closeIcon {
+    display: none;
+}
+.menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    pointer-events: none;
+
+    &.open {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
